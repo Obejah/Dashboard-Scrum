@@ -15,7 +15,7 @@ namespace Meldingspunt.Services
         //Post
         public void CreateConnection()
         {
-            string connetionString = null;
+            string connetionString = "";
             SqlConnection cnn;
             connetionString = "Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
             cnn = new SqlConnection(connetionString);
