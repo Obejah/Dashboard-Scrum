@@ -24,3 +24,14 @@ C:\Users\obeja\RiderProjects\Meldingspunt\Rapporteersysteem\Meldingspunt\Melding
 C:\Users\obeja\RiderProjects\Meldingspunt\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.pdb
 C:\Users\obeja\RiderProjects\Meldingspunt\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.genruntimeconfig.cache
 C:\Users\obeja\RiderProjects\Meldingspunt\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\ref\Meldingspunt.dll
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.csproj.AssemblyReference.cache
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.AssemblyInfoInputs.cache
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.AssemblyInfo.cs
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.csproj.CoreCompileInputs.cache
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.RazorAssemblyInfo.cache
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.RazorAssemblyInfo.cs
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.dll
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\refint\Meldingspunt.dll
+C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\obj\Debug\net6.0\Meldingspunt.pdb
