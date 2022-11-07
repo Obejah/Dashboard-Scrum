@@ -16,10 +16,10 @@ namespace Meldingspunt.Services
 
         //Post
         public SqlConnection Connection = new SqlConnection();
-        public void CreateConnection()
+        public void CreateConnection(string _serverName, string _dbName, string _userName, string _password)
         {
             SqlConnection cnn;
-            string connetionString = "Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
+            string connetionString = $"Data Source={_serverName};Initial Catalog={_dbName};User ID={_userName};Password={_password}";
             cnn = new SqlConnection(connetionString);
             Connection = cnn;
         }
