@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Meldingspunt.Extentions;
-using Meldingspunt.Models;
+using Models;
 
 namespace Meldingspunt.Services
 {

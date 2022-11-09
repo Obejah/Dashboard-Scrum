@@ -1,4 +1,4 @@
-﻿namespace Meldingspunt.Models
+﻿namespace Models
 {
     public class User : ModelBase
     {

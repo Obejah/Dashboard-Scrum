@@ -1,4 +1,4 @@
-﻿using Meldingspunt.Models;
+﻿using Models;
 using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
@@ -15,7 +15,7 @@ namespace Meldingspunt.Services
             {
                 while (reader.Read())
                 {
-                    meldingsPunt Point = new meldingsPunt();
+                    Models.MeldingsPunt Point = new Models.MeldingsPunt();
 
                     Point.UuId = (string)reader.GetValue(0);
                     Point.UserId = (int)reader.GetValue(1);
@@ -34,7 +34,7 @@ namespace Meldingspunt.Services
 
         public override ModelBase GetById(int _id)
         {
-            meldingsPunt point = new meldingsPunt();
+            Models.MeldingsPunt point =  new Models.MeldingsPunt();
 
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where UUID = '{_id}'");
             try
@@ -64,7 +64,7 @@ namespace Meldingspunt.Services
             {
                 while (reader.Read())
                 {
-                    meldingsPunt point = new meldingsPunt();
+                    Models.MeldingsPunt point = new Models.MeldingsPunt();
 
                     point.UuId = (string)reader.GetValue(0);
                     point.UserId = (int)reader.GetValue(1);

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using Meldingspunt.Models;
+using Models;
 using Meldingspunt.Services;
 
 namespace Optionspunt.Services

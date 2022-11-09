@@ -1,4 +1,4 @@
-﻿using Meldingspunt.Models;
+﻿using Models;
 using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 

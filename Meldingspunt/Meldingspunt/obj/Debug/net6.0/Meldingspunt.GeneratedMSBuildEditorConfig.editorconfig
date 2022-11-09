@@ -8,37 +8,41 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Meldingspunt
 build_property.RootNamespace = Meldingspunt
-build_property.ProjectDir = C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt\
+build_property.ProjectDir = /Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jaime\source\repos\Rapporteersysteem\Meldingspunt\Meldingspunt
+build_property.MSBuildProjectDirectory = /Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jaime/source/repos/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jaime/source/repos/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jaime/source/repos/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Meldingspunt/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVsZGluZ3NwdW50L0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jaime/source/repos/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jaime/source/repos/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jaime/source/repos/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jaime/source/repos/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-aubgzv1uxd
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-n8dbaskaxm

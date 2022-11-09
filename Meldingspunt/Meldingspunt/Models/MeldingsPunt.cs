@@ -1,8 +1,8 @@
-﻿namespace Meldingspunt.Models
+﻿namespace Models
 {
-    public class meldingsPunt : ModelBase
+    public class MeldingsPunt : ModelBase   
     {
-        public meldingsPunt()
+        public MeldingsPunt()
         {
             Id = 0;  
         }

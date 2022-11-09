@@ -1,0 +1,9 @@
+@model List<Models.MeldingsPunt> 
+
+<div>
+  @foreach(Models.MeldingsPunt meldingspunt in Model)
+  {
+      @meldingspunt.Name;
+      <br/>
+  }
+</div>

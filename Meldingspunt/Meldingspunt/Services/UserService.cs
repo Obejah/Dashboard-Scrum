@@ -1,4 +1,4 @@
-﻿using Meldingspunt.Models;
+﻿using Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Data.SqlClient;
 

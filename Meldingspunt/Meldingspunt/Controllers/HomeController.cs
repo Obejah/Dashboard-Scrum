@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Meldingspunt.Models;
+using Models;
 
 namespace Meldingspunt.Controllers;
 
