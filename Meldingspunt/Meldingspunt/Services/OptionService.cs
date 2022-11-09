@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using Meldingspunt.Models;
-using Meldingspunt.Services
+using Meldingspunt.Services;
 
 namespace Optionspunt.Services
 {
@@ -34,53 +34,26 @@ namespace Optionspunt.Services
             }
         }
 
-        public List<ModelBase> GetById(int _id)
-        {
-            List<ModelBase> Options = new List<ModelBase>();
 
+        public override ModelBase GetById(int _id)
+        {
+            Option option = new Option();
             SqlDataReader reader = CreateReaderAndSetQuery(""); // pleaseAddQuery
             try
             {
                 while (reader.Read())
                 {
-                    Option option = new Option();
+                  
 
                     option.Id = (int)reader.GetValue(0);
                     option.MeldingsPuntiD = (string)reader.GetValue(1);
                     option.OptionName = (string)reader.GetValue(2);
                     option.Urgency = (int)reader.GetValue(3);
 
-                    Options.Add(option);
+
                 }
+                return option;
 
-                return Options;
-            }
-            finally
-            {
-                Connection.Close();
-            }
-        }
-
-        public List<ModelBase> GetByUrgency(string _id)
-        {
-            List<ModelBase> Options = new List<ModelBase>();
-
-            SqlDataReader reader = CreateReaderAndSetQuery(""); // pleaseAddQuery
-            try
-            {
-                while (reader.Read())
-                {
-                    Option option = new Option();
-
-                    option.Id = (int)reader.GetValue(0);
-                    option.MeldingsPuntiD = (string)reader.GetValue(1);
-                    option.OptionName = (string)reader.GetValue(2);
-                    option.Urgency = (int)reader.GetValue(3);
-
-                    Options.Add(option);
-                }
-
-                return Options;
             }
             finally
             {

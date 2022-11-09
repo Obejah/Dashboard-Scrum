@@ -53,5 +53,9 @@ namespace Meldingspunt.Services
         {
 
         }
+        public virtual ModelBase GetById(int _id)
+        {
+            return null;
+        }
     }
 }

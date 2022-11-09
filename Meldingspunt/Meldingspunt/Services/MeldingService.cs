@@ -33,25 +33,25 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<ModelBase> GetById(int _id)
+        public override ModelBase GetById(int _id)
         {
-            List<ModelBase> meldingen = new List<ModelBase>();
+            Melding melding = new Melding();
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From melding where Id = '{_id}'");
             try
             {
                 while (reader.Read())
                 {
-                    Melding melding = new Melding();
+                    
 
                     melding.Id = (int)reader.GetValue(0);
                     melding.OptiesId = (int)reader.GetValue(1);
                     melding.Other = (string)reader.GetValue(2);
                     melding.Date = (DateTime)reader.GetValue(3);
 
-                    meldingen.Add(melding);
                 }
 
-                return meldingen;
+                return melding;
+
             }
             finally
             {

@@ -32,25 +32,23 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<ModelBase> GetByUuId(int _id)
+        public override ModelBase GetById(int _id)
         {
-            List<ModelBase> Points = new List<ModelBase>();
+            meldingsPunt point = new meldingsPunt();
+
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where UUID = '{_id}'");
             try
             {
                 while (reader.Read())
                 {
-                    meldingsPunt point = new meldingsPunt();
 
                     point.UuId = (string)reader.GetValue(0);
                     point.UserId = (int)reader.GetValue(1);
                     point.Name = (string)reader.GetValue(2);
 
-
-                    Points.Add(point);
                 }
+                return point;
 
-                return Points;
             }
             finally
             {
