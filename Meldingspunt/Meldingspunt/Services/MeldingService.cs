@@ -6,11 +6,16 @@ namespace Meldingspunt.Services
 {
     public class MeldingService : ServiceBaseCLass
     {
+        private int userId;
+        MeldingService(int _userId)
+        {
+            userId = _userId;
+        }
         public override List<ModelBase> GetAll()
         {
             List<ModelBase> meldingen = new List<ModelBase>();
 
-            SqlDataReader reader = CreateReaderAndSetQuery("");
+            SqlDataReader reader = CreateReaderAndSetQuery($"select * from meldingspunten where UserID = '{userId}'");
             try
             {
                 while (reader.Read())

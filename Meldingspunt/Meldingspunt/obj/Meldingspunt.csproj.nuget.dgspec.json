@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Meldingspunt.csproj": {}
+    "C:\\Users\\jaime\\source\\repos\\Rapporteersysteem\\Meldingspunt\\Meldingspunt\\Meldingspunt.csproj": {}
   },
   "projects": {
-    "/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Meldingspunt.csproj": {
+    "C:\\Users\\jaime\\source\\repos\\Rapporteersysteem\\Meldingspunt\\Meldingspunt\\Meldingspunt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Meldingspunt.csproj",
+        "projectUniqueName": "C:\\Users\\jaime\\source\\repos\\Rapporteersysteem\\Meldingspunt\\Meldingspunt\\Meldingspunt.csproj",
         "projectName": "Meldingspunt",
-        "projectPath": "/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/Meldingspunt.csproj",
-        "packagesPath": "/Users/yusufk/.nuget/packages/",
-        "outputPath": "/Users/yusufk/Documents/GitHub/Rapporteersysteem/Meldingspunt/Meldingspunt/obj/",
+        "projectPath": "C:\\Users\\jaime\\source\\repos\\Rapporteersysteem\\Meldingspunt\\Meldingspunt\\Meldingspunt.csproj",
+        "packagesPath": "C:\\Users\\jaime\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jaime\\source\\repos\\Rapporteersysteem\\Meldingspunt\\Meldingspunt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/yusufk/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jaime\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -65,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
