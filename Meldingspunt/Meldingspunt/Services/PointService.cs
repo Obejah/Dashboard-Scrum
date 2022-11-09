@@ -6,16 +6,11 @@ namespace Meldingspunt.Services
 {
     public class PointService : ServiceBaseCLass
     {
-        private string userId;
-        public PointService(string _user)
-        {
-            userId = _user;
-        }
         public override List<ModelBase> GetAll()
         {
             List<ModelBase> points = new List<ModelBase>();
 
-            SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where UserID = {userId}");
+            SqlDataReader reader = CreateReaderAndSetQuery("");
             try
             {
                 while (reader.Read())
@@ -37,9 +32,9 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<meldingsPunt> GetByUuId(int _id)
+        public List<ModelBase> GetByUuId(int _id)
         {
-            List<meldingsPunt> Points = new List<meldingsPunt>();
+            List<ModelBase> Points = new List<ModelBase>();
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where UUID = '{_id}'");
             try
             {
@@ -63,9 +58,9 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<meldingsPunt> GetByUser(string _user)
+        public List<ModelBase> GetByUser(string _user)
         {
-            List<meldingsPunt> Points = new List<meldingsPunt>();
+            List<ModelBase> Points = new List<ModelBase>();
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where User = '{_user}'");
             try
             {

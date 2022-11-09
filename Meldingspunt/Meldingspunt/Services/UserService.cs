@@ -33,9 +33,9 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<User> GetById(int _id)
+        public List<ModelBase> GetById(int _id)
         {
-            List<User> users = new List<User>();
+            List<ModelBase> users = new List<ModelBase>();
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From users where ID = '{_id}'");
             try
             {
@@ -59,9 +59,9 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<User> GetByMail(string _mail)
+        public List<ModelBase> GetByMail(string _mail)
         {
-            List<User> users = new List<User>();
+            List<ModelBase> users = new List<ModelBase>();
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From users where Email = '{_mail}'");
             try
             {

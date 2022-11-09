@@ -10,7 +10,7 @@ namespace Meldingspunt.Services
         {
             List<ModelBase> meldingen = new List<ModelBase>();
 
-            SqlDataReader reader = CreateReaderAndSetQuery("Select * From melding");
+            SqlDataReader reader = CreateReaderAndSetQuery("");
             try
             {
                 while (reader.Read())
@@ -33,9 +33,9 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<Melding> GetById(int _id)
+        public List<ModelBase> GetById(int _id)
         {
-            List<Melding> meldingen = new List<Melding>();
+            List<ModelBase> meldingen = new List<ModelBase>();
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From melding where Id = '{_id}'");
             try
             {
@@ -59,9 +59,9 @@ namespace Meldingspunt.Services
             }
         }
 
-        public List<Melding> GetByMeldingsPuntId(string _id)
+        public List<ModelBase> GetByMeldingsPuntId(string _id)
         {
-            List<Melding> meldingen = new List<Melding>();
+            List<ModelBase> meldingen = new List<ModelBase>();
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From melding where MeldingsPuntId = '{_id}'");
             try
             {
