@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using Meldingspunt.Models;
-using Meldingspunt.Services
+using Meldingspunt.Services;
 
 namespace Optionspunt.Services
 {
@@ -11,7 +11,7 @@ namespace Optionspunt.Services
         {
             List<ModelBase> Options = new List<ModelBase>();
 
-            SqlDataReader reader = CreateReaderAndSetQuery("");// pleaseAddQuery
+            SqlDataReader reader = CreateReaderAndSetQuery("Select * From options");// pleaseAddQuery
             try
             {
                 while (reader.Read())
