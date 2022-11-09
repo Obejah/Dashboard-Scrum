@@ -9,7 +9,7 @@ public class MeldingsPuntController : Controller
 {
     public IActionResult Index()
     {
-        PointService service = new PointService();
+        PointService service = new PointService(1);
 
         List<Models.MeldingsPunt> myList = new List<Models.MeldingsPunt>();
 
