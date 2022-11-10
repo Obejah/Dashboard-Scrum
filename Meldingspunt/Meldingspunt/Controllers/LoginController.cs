@@ -1,22 +1,16 @@
- using System;
- using System.Collections.Generic;
- using System.Linq;
- using System.Threading.Tasks;
- using Meldingspunt.Models;
- using Microsoft.AspNetCore.Mvc;
- using Meldingspunt.Services;
- using Microsoft.AspNetCore.Identity;
-using NuGet.Protocol.Plugins;
+using Microsoft.AspNetCore.Mvc;
+using Meldingspunt.Services;
+// using NuGet.Protocol.Plugins;
 
- namespace Meldingspunt.Controllers
- {
-     public class LoginController : Controller
+namespace Meldingspunt.Controllers
+{
+    public class LoginController : Controller
      {
          private UserService userService = new UserService();
 
          LoginController()
         {
-             userService.CreateConnection(localhost, meldingspunt, root, root);
+             //userService.CreateConnection(localhost, meldingspunt, root, root);
          }
 
          [HttpGet]
@@ -30,7 +24,7 @@ using NuGet.Protocol.Plugins;
              string dummymail = "hehehaha@gmail.com";
              string dummypw = "hohoho";
 
-             //User user = userService.GetByMail("hehehaha@gmail.com").FirstOrDefault();
+            /* //User user = userService.GetByMail("hehehaha@gmail.com").FirstOrDefault();
              if (user != null)
              {
                  if (user.Password == dummypw)
@@ -45,7 +39,7 @@ using NuGet.Protocol.Plugins;
              else
              {
                  // fout mail
-             }
+             }*/
 
              return View();
          }

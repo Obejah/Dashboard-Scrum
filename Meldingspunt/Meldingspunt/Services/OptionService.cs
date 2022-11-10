@@ -2,7 +2,7 @@
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using Models;
 using Meldingspunt.Services;
-
+using MySql.Data.MySqlClient;
 namespace Optionspunt.Services
 {
     public class OptionService : ServiceBaseCLass
@@ -11,7 +11,7 @@ namespace Optionspunt.Services
         {
             List<ModelBase> Options = new List<ModelBase>();
 
-            SqlDataReader reader = CreateReaderAndSetQuery("");// pleaseAddQuery
+            MySqlDataReader reader = CreateReaderAndSetQuery("");// pleaseAddQuery
             try
             {
                 while (reader.Read())
@@ -38,7 +38,7 @@ namespace Optionspunt.Services
         public override ModelBase GetById(int _id)
         {
             Option option = new Option();
-            SqlDataReader reader = CreateReaderAndSetQuery(""); // pleaseAddQuery
+            MySqlDataReader reader = CreateReaderAndSetQuery(""); // pleaseAddQuery
             try
             {
                 while (reader.Read())
@@ -63,7 +63,7 @@ namespace Optionspunt.Services
         public override void Post(ModelBase _model)
         {
             string queryS = $"";
-            SqlCommand query = new SqlCommand(queryS, Connection);
+            MySqlCommand query = new MySqlCommand(queryS, Connection);
             Connection.Open();
             query.ExecuteNonQuery();
             Connection.Close();
@@ -71,7 +71,7 @@ namespace Optionspunt.Services
         public override void Delete(ModelBase _model)
         {
             string queryS = $"delete * from Option where ID = '{_model.Id}'";
-            SqlCommand query = new SqlCommand(queryS, Connection);
+            MySqlCommand query = new MySqlCommand(queryS, Connection);
             Connection.Open();
             query.ExecuteNonQuery();
             Connection.Close();

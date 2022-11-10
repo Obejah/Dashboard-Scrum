@@ -1,7 +1,7 @@
 ﻿using Models;
 using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-
+using MySql.Data.MySqlClient;
 namespace Meldingspunt.Services
 {
     public class MeldingService : ServiceBaseCLass
@@ -10,7 +10,7 @@ namespace Meldingspunt.Services
         {
             List<ModelBase> meldingen = new List<ModelBase>();
 
-            SqlDataReader reader = CreateReaderAndSetQuery("");
+            MySqlDataReader reader = CreateReaderAndSetQuery("");
             try
             {
                 while (reader.Read())
@@ -36,7 +36,7 @@ namespace Meldingspunt.Services
         public override ModelBase GetById(int _id)
         {
             Melding melding = new Melding();
-            SqlDataReader reader = CreateReaderAndSetQuery($"Select * From melding where Id = '{_id}'");
+            MySqlDataReader reader = CreateReaderAndSetQuery($"Select * From melding where Id = '{_id}'");
             try
             {
                 while (reader.Read())
@@ -62,7 +62,7 @@ namespace Meldingspunt.Services
         public List<ModelBase> GetByMeldingsPuntId(string _id)
         {
             List<ModelBase> meldingen = new List<ModelBase>();
-            SqlDataReader reader = CreateReaderAndSetQuery($"Select * From melding where MeldingsPuntId = '{_id}'");
+            MySqlDataReader reader = CreateReaderAndSetQuery($"Select * From melding where MeldingsPuntId = '{_id}'");
             try
             {
                 while (reader.Read())
@@ -87,7 +87,7 @@ namespace Meldingspunt.Services
         public override void Post(ModelBase _model)
         {
             string queryS = $"";
-            SqlCommand query = new SqlCommand(queryS, Connection);
+            MySqlCommand query = new MySqlCommand(queryS, Connection);
             Connection.Open();
             query.ExecuteNonQuery();
             Connection.Close();
@@ -95,7 +95,7 @@ namespace Meldingspunt.Services
         public override void Delete(ModelBase _model)
         {
             string queryS = $"delete * from melding where ID = '{_model.Id}'";
-            SqlCommand query = new SqlCommand(queryS, Connection);
+            MySqlCommand query = new MySqlCommand(queryS, Connection);
             Connection.Open();
             query.ExecuteNonQuery();
             Connection.Close();

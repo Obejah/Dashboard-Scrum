@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Meldingspunt.Extentions;
+ 
 using Models;
+using MySql.Data.MySqlClient;
 
 namespace Meldingspunt.Services
 {
@@ -15,23 +17,32 @@ namespace Meldingspunt.Services
         //Get
 
         //Post
-        public SqlConnection Connection = new SqlConnection();
+        public MySqlConnection Connection = new MySqlConnection();
         public void CreateConnection(string _serverName, string _dbName, string _userName, string _password)
         {
+<<<<<<< HEAD
+            MySqlConnection cnn;
+            string connetionString = $"Data Source={_serverName};Initial Catalog={_dbName};User ID={_userName};Password={_password}";
+            //string connetionString = "Server=mysql://localhost:3306;Database=meldingspunt;Uid=root;Pwd=root";
+            //string connetionString = "Server=localhost;Port=3306;Database=meldingspunt;Uid=root;Pwd=root;connect timeout=100;";
+            cnn = new MySqlConnection(connetionString);
+=======
             Extentions.testDbList.AddItemsToDB();
             SqlConnection cnn;
             //string connetionString = $"Data Source={_serverName};Initial Catalog={_dbName};User ID={_userName};Password={_password}";
             string connetionString = "Data Source=OBEJAH-LAPTOP\\SQLEXPRESS;Initial Catalog=Meldingspunt; Integrated Security=True; TrustServerCertificate=True";
             cnn = new SqlConnection(connetionString); 
+>>>>>>> ca078ef6e034f09695fedaf2259ef27da50ee4b4
             Connection = cnn;
         }
-        public SqlDataReader CreateReaderAndSetQuery(string _queryS)
+        public MySqlDataReader CreateReaderAndSetQuery(string _queryS)
         {
             string queryString = _queryS;
-            SqlCommand query = new SqlCommand(queryString, Connection);
+            MySqlCommand query = new MySqlCommand(queryString, Connection);
+            Extentions.Extentions.DebugOutput($"{Connection.State}");
             Connection.Open();
             Extentions.Extentions.DebugOutput("connection open");
-            SqlDataReader reader = query.ExecuteReader();
+            MySqlDataReader reader = query.ExecuteReader();
             return reader;
         }
 

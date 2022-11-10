@@ -1,7 +1,7 @@
 ﻿using Models;
 using Microsoft.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-
+using MySql.Data.MySqlClient;
 namespace Meldingspunt.Services
 {
     public class PointService : ServiceBaseCLass
@@ -15,7 +15,12 @@ namespace Meldingspunt.Services
         {
             List<ModelBase> points = new List<ModelBase>();
 
+<<<<<<< HEAD
+            MySqlDataReader reader = CreateReaderAndSetQuery($"select * from meldingspunten where UserID = '{userId}'"); 
+            Extentions.Extentions.DebugOutput($"{reader.IsClosed}");
+=======
             SqlDataReader reader = CreateReaderAndSetQuery($"select * from meldingspunt where UserID = '{userId}'");
+>>>>>>> ca078ef6e034f09695fedaf2259ef27da50ee4b4
             try
             {
                 while (reader.Read())
@@ -41,7 +46,7 @@ namespace Meldingspunt.Services
         {
             Models.Point point =  new Models.Point();
 
-            SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where UUID = '{_id}'");
+            MySqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where UUID = '{_id}'");
             try
             {
                 while (reader.Read())
@@ -64,7 +69,7 @@ namespace Meldingspunt.Services
         public List<ModelBase> GetByUser(string _user)
         {
             List<ModelBase> Points = new List<ModelBase>();
-            SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where User = '{_user}'");
+            MySqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where User = '{_user}'");
             try
             {
                 while (reader.Read())
@@ -89,7 +94,7 @@ namespace Meldingspunt.Services
         public override void Post(ModelBase _model)
         {
             string queryS = $"";
-            SqlCommand query = new SqlCommand(queryS, Connection);
+            MySqlCommand query = new MySqlCommand(queryS, Connection);
             Connection.Open();
             query.ExecuteNonQuery();
             Connection.Close();
@@ -97,7 +102,7 @@ namespace Meldingspunt.Services
         public override void Delete(ModelBase _model)
         {
             string queryS = $"delete * from meldingspunt where ID = '{_model.Id}'";
-            SqlCommand query = new SqlCommand(queryS, Connection);
+            MySqlCommand query = new MySqlCommand(queryS, Connection);
             Connection.Open();
             query.ExecuteNonQuery();
             Connection.Close();
