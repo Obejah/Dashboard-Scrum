@@ -3,20 +3,16 @@
 <div>
   @foreach(Models.Point meldingspunt in Model)
   {
-<<<<<<< HEAD
-      <a href="">
           <div>
               @meldingspunt.Name;<br/>
           </div>
-      </a>
-=======
      <div>
          name:   @meldingspunt.Name;  
          uuid:   @meldingspunt.UuId; 
          userid: @meldingspunt.UserId;
      </div> 
+      @meldingspunt.Name;
       <br/>
->>>>>>> ca078ef6e034f09695fedaf2259ef27da50ee4b4
   }
   <a href=""></a>
 </div>

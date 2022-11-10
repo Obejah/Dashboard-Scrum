@@ -14,13 +14,7 @@ namespace Meldingspunt.Services
         public override List<ModelBase> GetAll()
         {
             List<ModelBase> points = new List<ModelBase>();
-
-<<<<<<< HEAD
             MySqlDataReader reader = CreateReaderAndSetQuery($"select * from meldingspunten where UserID = '{userId}'"); 
-            Extentions.Extentions.DebugOutput($"{reader.IsClosed}");
-=======
-            SqlDataReader reader = CreateReaderAndSetQuery($"select * from meldingspunt where UserID = '{userId}'");
->>>>>>> ca078ef6e034f09695fedaf2259ef27da50ee4b4
             try
             {
                 while (reader.Read())
