@@ -18,6 +18,7 @@ namespace Meldingspunt.Services
         public SqlConnection Connection = new SqlConnection();
         public void CreateConnection(string _serverName, string _dbName, string _userName, string _password)
         {
+            Extentions.testDbList.AddItemsToDB();
             SqlConnection cnn;
             //string connetionString = $"Data Source={_serverName};Initial Catalog={_dbName};User ID={_userName};Password={_password}";
             string connetionString = "Data Source=OBEJAH-LAPTOP\\SQLEXPRESS;Initial Catalog=Meldingspunt; Integrated Security=True; TrustServerCertificate=True";

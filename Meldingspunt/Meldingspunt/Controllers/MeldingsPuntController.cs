@@ -18,7 +18,7 @@ public class MeldingsPuntController : Controller
     public IActionResult Index()
     {
 
-        List<Models.MeldingsPunt> testDblist = pointService.GetAll().Cast<Models.MeldingsPunt>().ToList();
+        List<Models.Point> testDblist = pointService.GetAll().Cast<Models.Point>().ToList();
 
        
 

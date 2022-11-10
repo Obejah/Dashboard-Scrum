@@ -1,0 +1,15 @@
+﻿@model List<Models.Point> 
+
+@foreach (var item in Model.Where(u => ("")))
+{
+
+    <tr>
+        <td class="c">
+            @item.UserName
+        </td>
+
+        <td class="c">
+            @item.EmailConfirmed
+        </td>
+    </tr>
+}

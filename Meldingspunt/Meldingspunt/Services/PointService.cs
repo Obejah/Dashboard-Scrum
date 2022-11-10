@@ -20,7 +20,7 @@ namespace Meldingspunt.Services
             {
                 while (reader.Read())
                 {
-                    Models.MeldingsPunt Point = new Models.MeldingsPunt();
+                    Models.Point Point = new Models.Point();
 
                     Point.UuId = (string)reader.GetValue(0);
                     Point.UserId = (int)reader.GetValue(1);
@@ -39,7 +39,7 @@ namespace Meldingspunt.Services
 
         public override ModelBase GetById(int _id)
         {
-            Models.MeldingsPunt point =  new Models.MeldingsPunt();
+            Models.Point point =  new Models.Point();
 
             SqlDataReader reader = CreateReaderAndSetQuery($"Select * From meldingspunt where UUID = '{_id}'");
             try
@@ -69,7 +69,7 @@ namespace Meldingspunt.Services
             {
                 while (reader.Read())
                 {
-                    Models.MeldingsPunt point = new Models.MeldingsPunt();
+                    Models.Point point = new Models.Point();
 
                     point.UuId = (string)reader.GetValue(0);
                     point.UserId = (int)reader.GetValue(1);
