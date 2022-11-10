@@ -10,28 +10,17 @@ namespace Meldingspunt.Controllers;
 public class MeldingsPuntController : Controller
 {
     private PointService pointService;
-    MeldingsPuntController()
+    public MeldingsPuntController()
     {
-        pointService = new PointService(0);
-        pointService.CreateConnection("localhost", "meldinspunt", "root", "root");
+        pointService = new PointService(5);
+        pointService.CreateConnection("localhost", "Meldingspunt", @"OBEJAH-LAPTOP\obeja", "");
     }
     public IActionResult Index()
     {
 
         List<Models.MeldingsPunt> testDblist = pointService.GetAll().Cast<Models.MeldingsPunt>().ToList();
 
-        List<Models.MeldingsPunt> myList = new List<Models.MeldingsPunt>();
-
-        Models.MeldingsPunt firstMeldingspunt = new Models.MeldingsPunt();
-        firstMeldingspunt.Name = "First";
-        firstMeldingspunt.Id = 1;
-
-        Models.MeldingsPunt secondMeldingspunt = new Models.MeldingsPunt();
-        secondMeldingspunt.Name = "Second";
-        secondMeldingspunt.Id = 1;
-
-        myList.Add(firstMeldingspunt);
-        myList.Add(secondMeldingspunt);
+       
 
         
         //var meldingspunten = service.GetAll();
@@ -42,7 +31,7 @@ public class MeldingsPuntController : Controller
 
         //}
    
-        return View(myList);
+        return View(testDblist);
     }
 
 

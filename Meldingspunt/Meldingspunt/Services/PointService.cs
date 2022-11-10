@@ -15,7 +15,7 @@ namespace Meldingspunt.Services
         {
             List<ModelBase> points = new List<ModelBase>();
 
-            SqlDataReader reader = CreateReaderAndSetQuery($"select * form meldingspunten where UserID = '{userId}'");
+            SqlDataReader reader = CreateReaderAndSetQuery($"select * from meldingspunt where UserID = '{userId}'");
             try
             {
                 while (reader.Read())
