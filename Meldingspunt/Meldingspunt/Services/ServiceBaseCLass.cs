@@ -20,9 +20,8 @@ namespace Meldingspunt.Services
         {
             Extentions.testDbList.AddItemsToDB();
             SqlConnection cnn;
-            //string connetionString = $"Data Source={_serverName};Initial Catalog={_dbName};User ID={_userName};Password={_password}";
-            string connetionString = "Data Source=OBEJAH-LAPTOP\\SQLEXPRESS;Initial Catalog=Meldingspunt; Integrated Security=True; TrustServerCertificate=True";
-            cnn = new SqlConnection(connetionString); 
+            string connetionString = $"Data Source={_serverName};Initial Catalog={_dbName};User ID={_userName};Password={_password}";
+            cnn = new SqlConnection(connetionString);
             Connection = cnn;
         }
         public SqlDataReader CreateReaderAndSetQuery(string _queryS)

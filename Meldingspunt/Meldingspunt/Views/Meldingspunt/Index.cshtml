@@ -3,11 +3,7 @@
 <div>
   @foreach(Models.Point meldingspunt in Model)
   {
-     <div>
-         name:   @meldingspunt.Name;  
-         uuid:   @meldingspunt.UuId; 
-         userid: @meldingspunt.UserId;
-     </div> 
+      @meldingspunt.Name;
       <br/>
   }
 </div>
