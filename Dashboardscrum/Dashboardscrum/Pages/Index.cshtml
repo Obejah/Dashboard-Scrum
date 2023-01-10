@@ -1,0 +1,23 @@
+﻿@page
+@using Dashboardscrum.Repositories;
+@model IndexModel
+@inject UserRepository _userRepository
+@{
+    var loggedIn = _userRepository.IsUserLoggedIn();
+}
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+@if (loggedIn)
+{
+    <div class="text-center">
+        <h1 class="display-4">Yodie gang</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+}
+@if (!loggedIn){
+    <h1>Fake yodie gang</h1>
+}

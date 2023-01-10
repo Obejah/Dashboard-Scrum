@@ -1,0 +1,80 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers;
+@model Dashboardscrum.Pages.Docent.TeamsOverzichtModel
+@using Dashboardscrum.Repositories;
+@inject UserRepository _userRepository
+@{
+    var loggedIn = _userRepository.IsUserLoggedIn();
+}
+
+@if (loggedIn)
+{
+    <div class="container">
+        <div class="row">
+            @if(Model._Team != null)
+            {
+                <ul class="list-group">
+                    @foreach(var team in Model._Team)
+                    {
+                        <form method="post">
+                            <input type="hidden" asp-for="Team!.TeamId" value="@team.TeamId"/>
+                            <li class="list-group-item">
+                                <label>Team</label>
+                                <input type="text" asp-for="Team!.Name" value="@team.Name"/>
+                                <input type="hidden" asp-for="Team!.TeamId" value="@team.TeamId"/>
+                                <button type="submit" asp-page-handler="UpdateTeam" class="btn btn-primary">Wijzig team</button>
+                                <button type="submit" asp-page-handler="DeleteTeam" class="btn btn-danger">Verwijder team</button>
+                        </form>
+                    }
+                </ul>
+            }
+            else
+            {
+                <h1>Er zijn geen Teams</h1>
+            }
+        </div>
+    </div>
+}
+else
+{
+}
+
+@*<h1>Teams</h1>
+
+<p>
+    <a asp-page="CreateTeam">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.teams)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.teams != null) 
+        {
+            foreach (var item in Model.teams)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        <h1>@item.Name</h1>
+                        <a asp-page="./Edit" asp-route-id="@item.TeamId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.TeamId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.TeamId">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <h1>yo het is leeg</h1>
+        }
+    </tbody>
+</table>*@
